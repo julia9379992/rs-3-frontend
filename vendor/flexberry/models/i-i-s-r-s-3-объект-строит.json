@@ -1,0 +1,63 @@
+﻿{
+  "name": "IISRS_3ОбъектСтроит",
+  "modelName": "i-i-s-r-s-3-объект-строит",
+  "className": "ОбъектСтроит",
+  "nameSpace": "IIS.RS_3",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "адрес",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "разрешение",
+      "relatedTo": "i-i-s-r-s-3-разреш-на-строит",
+      "inverse": "объектСтроит"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ОбъектСтроитE",
+      "modelName": "i-i-s-r-s-3-объект-строит",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "адрес",
+          "caption": "Адрес",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

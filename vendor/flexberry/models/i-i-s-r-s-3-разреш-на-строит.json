@@ -1,0 +1,157 @@
+﻿{
+  "name": "IISRS_3РазрешНаСтроит",
+  "modelName": "i-i-s-r-s-3-разреш-на-строит",
+  "className": "РазрешНаСтроит",
+  "nameSpace": "IIS.RS_3",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "видРазрешения",
+      "type": "i-i-s-r-s-3-t-вид-разрешения",
+      "flexberryType": "tВидРазрешения",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "архив",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаРазрешения",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерРазрешения",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "объектСтроит",
+      "relatedTo": "i-i-s-r-s-3-объект-строит",
+      "inverse": "разрешение"
+    },
+    {
+      "name": "застройщОрг",
+      "relatedTo": "i-i-s-r-s-3-застройщ-орг",
+      "inverse": "разрешение"
+    }
+  ],
+  "projections": [
+    {
+      "name": "РазрешНаСтроитE",
+      "modelName": "i-i-s-r-s-3-разреш-на-строит",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "видРазрешения",
+          "caption": "Вид разрешения",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "архив",
+          "caption": "Архив",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "датаРазрешения",
+          "caption": "Дата разрешения",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "номерРазрешения",
+          "caption": "Номер разрешения",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ОбъектСтроитE",
+          "caption": "Объект строит",
+          "name": "объектСтроит",
+          "relatedTo": "i-i-s-r-s-3-объект-строит",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "РазрешНаСтроитL",
+      "modelName": "i-i-s-r-s-3-разреш-на-строит",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "видРазрешения",
+          "caption": "Вид разрешения",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "архив",
+          "caption": "Архив",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "датаРазрешения",
+          "caption": "Дата разрешения",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "номерРазрешения",
+          "caption": "Номер разрешения",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

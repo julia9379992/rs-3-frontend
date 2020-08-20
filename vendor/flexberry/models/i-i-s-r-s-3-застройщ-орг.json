@@ -1,0 +1,84 @@
+﻿{
+  "name": "IISRS_3ЗастройщОрг",
+  "modelName": "i-i-s-r-s-3-застройщ-орг",
+  "className": "ЗастройщОрг",
+  "nameSpace": "IIS.RS_3",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "описание",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "организЗастр",
+      "relatedTo": "i-i-s-r-s-3-организация",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "разрешение",
+      "relatedTo": "i-i-s-r-s-3-разреш-на-строит",
+      "inverse": "застройщОрг"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ЗастройщикE",
+      "modelName": "i-i-s-r-s-3-застройщ-орг",
+      "attrs": [],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ЗастройщОргE",
+      "modelName": "i-i-s-r-s-3-застройщ-орг",
+      "attrs": [
+        {
+          "name": "описание",
+          "caption": "Описание",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "ОрганизЗастр",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Организ застр",
+          "name": "организЗастр",
+          "relatedTo": "i-i-s-r-s-3-организация",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

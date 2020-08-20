@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Разреш на строит",
+  "name": "IISRS_3РазрешНаСтроитE",
+  "className": "РазрешНаСтроитE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-r-s-3-разреш-на-строит",
+      "modelProjection": "РазрешНаСтроитE"
+    }
+  ]
+}

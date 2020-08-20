@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-r-s-3-разреш-на-строит-e",
+  "editForm": "i-i-s-r-s-3-разреш-на-строит-e",
+  "external": false,
+  "caption": "Разреш на строит",
+  "name": "IISRS_3РазрешНаСтроитL",
+  "className": "РазрешНаСтроитL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-r-s-3-разреш-на-строит",
+      "modelProjection": "РазрешНаСтроитL"
+    }
+  ]
+}
